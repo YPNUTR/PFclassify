@@ -1,0 +1,31 @@
+Type: Package
+Package: PFclassify
+Title: Protein Food (PF) Groups Classification for USDA Food Codes
+Version: 0.1.0
+Authors@R: c(
+    person("Yongyi", "Pan", , "Yongyi.Pan@tufts.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0005-7490-6993")),
+    person("Yung-Fang", "Hsiao", , "summerbreathsrelax@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-0097-9197"))
+  )
+Description: USDA 8-digit food codes may contain zero to multiple
+    non-duplicated Protein Food (PF) groups, including lean (red) meat,
+    lean poultry and cured meat. USDA's Food Patterns Equivalents Databas
+    (FPED) and Food Patterns Equivalents Ingredients Databas (FPID) have
+    already provided these break-down information. The author's team has
+    read through the description and further classify those PF groups into
+    subgroups. For example, lean (red) meat is classifed into pork, beef
+    and other red meat.
+License: MIT + file LICENSE
+URL: https://github.com/YPNUTR/PFclassify
+Imports:
+    dplyr (>= 1.0.0),
+    purrr (>= 1.0.0),
+    rlang (>= 1.0.0)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
