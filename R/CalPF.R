@@ -38,7 +38,7 @@
 #' # Example 1 using PF_sample_1
 #' # Keep subtotal of lean (red) meat, lean beef, lean pork, lean poultry and lean chicken
 #' PF_sample_1_fmt <- ReFormatDF(
-#'   PF_sample_1,
+#'   infile = PF_sample_1,
 #'   var_cycle = "year",
 #'   var_Food_code = "fdcd",
 #'   var_weight = "fdwt",
@@ -47,8 +47,9 @@
 #' )
 #'
 #' PF_sample_1_PF_break <- CalPF(
-#'   PF_sample_1_fmt,
+#'   infile = PF_sample_1_fmt,
 #'   fdcd_description = TRUE,
+#'   var_id = "id",
 #'   option_subtotal = c("meat", "poult"),
 #'   option_meat = c("beef", "pork"),
 #'   option_poult = c("chick"),
@@ -61,7 +62,7 @@
 #' # Keep subtotal of cured meat, with its components: cured pork and cured chicken
 #'
 #' PF_sample_3_fmt <- ReFormatDF(
-#'   PF_sample_3,
+#'   infile = PF_sample_3,
 #'   var_cycle = "year",
 #'   var_Food_code = "fdcd",
 #'   var_weight = "fdwt",
@@ -70,8 +71,9 @@
 #' )
 #'
 #' PF_sample_3_PF_break <- CalPF(
-#'   PF_sample_3_fmt,
+#'   infile = PF_sample_3_fmt,
 #'   fdcd_description = TRUE,
+#'   var_id = "id",
 #'   option_subtotal = c("curedmeat"),
 #'   option_meat = c(),
 #'   option_poult = c(),
@@ -175,6 +177,7 @@ CalPF <- function(infile,
   subtotal_syms_4 <- make_syms("PF_CUREDMEAT_", tolower(option_curedmeat))
 
   temp_varnames <- colnames(temp)
+  temp_varnames <- temp_varnames[!startsWith(temp_varnames, "PF_")]
 
   # main calculation: weight all PF_ variables
   outfile <- temp |>

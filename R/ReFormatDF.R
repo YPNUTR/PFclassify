@@ -20,7 +20,8 @@
 #'
 #' @examples
 #' data(PF_sample_1)
-#' ReFormatDF(PF_sample_1,
+#' ReFormatDF(
+#'   infile = PF_sample_1,
 #'   var_cycle = "year",
 #'   var_Food_code = "fdcd",
 #'   var_weight = "fdwt",
@@ -29,7 +30,8 @@
 #' )
 #'
 #' data(PF_sample_2)
-#' ReFormatDF(PF_sample_2,
+#' ReFormatDF(
+#'   infile = PF_sample_2,
 #'   var_cycle = "year",
 #'   var_Food_code = "fdcd",
 #'   var_weight = "fdwt",
@@ -38,7 +40,8 @@
 #' )
 #'
 #' data(PF_sample_3)
-#' ReFormatDF(PF_sample_3,
+#' ReFormatDF(
+#'   infile = PF_sample_3,
 #'   var_cycle = "year",
 #'   var_Food_code = "fdcd",
 #'   var_weight = "fdwt",

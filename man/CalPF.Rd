@@ -61,7 +61,7 @@ which will result in no columns being selected for that option.
 # Example 1 using PF_sample_1
 # Keep subtotal of lean (red) meat, lean beef, lean pork, lean poultry and lean chicken
 PF_sample_1_fmt <- ReFormatDF(
-  PF_sample_1,
+  infile = PF_sample_1,
   var_cycle = "year",
   var_Food_code = "fdcd",
   var_weight = "fdwt",
@@ -70,8 +70,9 @@ PF_sample_1_fmt <- ReFormatDF(
 )
 
 PF_sample_1_PF_break <- CalPF(
-  PF_sample_1_fmt,
+  infile = PF_sample_1_fmt,
   fdcd_description = TRUE,
+  var_id = "id",
   option_subtotal = c("meat", "poult"),
   option_meat = c("beef", "pork"),
   option_poult = c("chick"),
@@ -84,7 +85,7 @@ colnames(PF_sample_1_PF_break)
 # Keep subtotal of cured meat, with its components: cured pork and cured chicken
 
 PF_sample_3_fmt <- ReFormatDF(
-  PF_sample_3,
+  infile = PF_sample_3,
   var_cycle = "year",
   var_Food_code = "fdcd",
   var_weight = "fdwt",
@@ -93,8 +94,9 @@ PF_sample_3_fmt <- ReFormatDF(
 )
 
 PF_sample_3_PF_break <- CalPF(
-  PF_sample_3_fmt,
+  infile = PF_sample_3_fmt,
   fdcd_description = TRUE,
+  var_id = "id",
   option_subtotal = c("curedmeat"),
   option_meat = c(),
   option_poult = c(),
