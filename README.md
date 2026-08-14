@@ -2,6 +2,8 @@
 
 An R package for standardized classification and quantification of red meat and poultry subtypes from dietary data using USDA food codes.
 
+Publication: https://doi.org/10.1016/j.jfca.2026.109434
+
 ## Overview
 
 **PFclassify** provides tools for:
