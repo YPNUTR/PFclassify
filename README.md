@@ -2,7 +2,7 @@
 
 An R package for standardized classification and quantification of red meat and poultry subtypes from dietary data using USDA food codes.
 
-Publication: https://doi.org/10.1016/j.jfca.2026.109434
+Publication: https://doi.org/10.1016/j.jfca.2026.109434. Analysis codes used in the publication can be found in folder `pub_code`.
 
 ## Overview
 
